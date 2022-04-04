@@ -1,5 +1,5 @@
-# Crear el archivo grafico.rb utilizando el método chart, que construya el siguiente gráfico
-# en la consola, a partir de un arreglo con datos numéricos.
+#Crear el archivo grafico.rb utilizando el método chart, que construya el siguiente gráfico
+#en la consola, a partir de un arreglo con datos numéricos.
 # ➜ irb
 # 2.6.0 :001 > require_relative "grafico"
 # => true
@@ -21,39 +21,38 @@
 # ● Es importante encontrar el número máximo.
 
 
+
 def chart (arr)
-    #Se obtiene el largo del array
-    n = arr.count
-
-    #ciclos para recorres el array e imprimir * por el valor dentro del array
-    n.times do |i|
-        print "|"
-        arr[i].times do |j|
-            print "**"
-        end
-        print "\n"
+    arr.map do |e|
+    print "|"
+    (e*2).times do |i|
+        print "*"
     end
-
-    #Se obtiene el maximo del array
-    maximo = arr.max
-
-    #Se imprimen las ultimas lineas
+    print "\n"
+    end
     print ">"
-    maximo.times do |m|
-        print "--"
+    (arr.max*2).times do |i|
+    print "-"
     end
     print "\n"
-
-    #Se imprimen los números de la base
-    maximo.times do |c|
-        print "#{c+1} "
+    (arr.max).times do |j|
+    print "#{j + 1} "
     end
-    print "\n"
 end
 
 
+# Otra forma
 
-print chart([5, 3, 2, 5, 10])
+# datos = [5,6,2,9,10]
+
+# datos.map do |e|
+#     var =''
+#     e.times do
+#        var += '*'
+#     end
+# puts "| " + var
+# end
+
 
 
 
