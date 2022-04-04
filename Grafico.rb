@@ -20,17 +20,88 @@
 # arreglo[0] = 3, implica ******.
 # ● Es importante encontrar el número máximo.
 
-arreglo=[5, 3, 2, 5, 10]
-def chart(arr)
-    arr.map do |elemento|
+
+def chart (arr)
+    #Se obtiene el largo del array
+    n = arr.count
+
+    #ciclos para recorres el array e imprimir * por el valor dentro del array
+    n.times do |i|
         print "|"
-        (2*elemento).times do |i|
-            print "*"
+        arr[i].times do |j|
+            print "**"
         end
         print "\n"
     end
+
+    #Se obtiene el maximo del array
+    maximo = arr.max
+
+    #Se imprimen las ultimas lineas
+    print ">"
+    maximo.times do |m|
+        print "--"
+    end
+    print "\n"
+
+    #Se imprimen los números de la base
+    maximo.times do |c|
+        print "#{c+1} "
+    end
+    print "\n"
 end
 
-chart(arreglo)
 
 
+print chart([5, 3, 2, 5, 10])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Otras formas de hacerlo
+
+# arreglo=[5, 3, 2, 5, 10]
+# def chart(arr)
+#     arr.map do |elemento|
+#         print "|"
+#         (2*elemento).times do |i|
+#             print "*"
+#         end
+#         print "\n"
+#     end
+# end
+
+# chart(arreglo)
+
+
+# datos = [5,6,2,9,10]
+
+# datos.map do |e|
+#     var =''
+#     e.times do
+#         var += '*'
+#     end
+# puts "| " + var
+# end

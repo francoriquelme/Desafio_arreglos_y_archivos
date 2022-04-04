@@ -12,22 +12,34 @@
 # que contenga solo las notas más alta de cada alumno.
 
 # leer archivos
-data = open("notas.data").readlines
-data = data.map do |e|
-    e.split(",")
-end
+# data = open("notas.data").readlines
+# data = data.map do |e|
+#     e.split(",")
+# end
+
+# def notas_mas_alta (leer_notas)
+#     notas = []
+#     leer_notas.each_with_index do |element, index|
+#         # Javiera,9,5,3,9
+#         next if index == 0
+#         notas << element.to_i
+#     end
+
+# #notas = [9,5,3,9]
+#     print notas.max
+# end
+
+# print notas_mas_alta(data[1])
 
 def notas_mas_alta (leer_notas)
-    notas = []
-    leer_notas.each_with_index do |element, index|
-        # Javiera,9,5,3,9
-        next if index == 0
-        notas << element.to_i
-    end
-
-#notas = [9,5,3,9]
-    print notas.max
+    
 end
+#leer archivos
+data = open("notas.data").readlines
+archivo_data = []
+archivo_data = data.map do |e|
+    e.split (",")
+end
+puts archivo_data
 
-print notas_mas_alta(data[1])
 
